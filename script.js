@@ -78,7 +78,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: ${type === 'success' ? '#d4a574' : '#2c3e50'};
+        background: ${type === 'success' ? '#ba6641' : '#a1864e'};
         color: white;
         padding: 15px 20px;
         border-radius: 8px;
@@ -262,11 +262,29 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Gallery "See More" functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    const galleryMore = document.getElementById('gallery-more');
+    
+    if (seeMoreBtn && galleryMore) {
+        seeMoreBtn.addEventListener('click', () => {
+            if (galleryMore.style.display === 'none') {
+                galleryMore.style.display = 'grid';
+                seeMoreBtn.textContent = 'See Less';
+            } else {
+                galleryMore.style.display = 'none';
+                seeMoreBtn.textContent = 'See More';
+            }
+        });
+    }
+});
+
 // Add active styles for navigation
 const style = document.createElement('style');
 style.textContent = `
     .nav-menu a.active {
-        color: #d4a574 !important;
+        color: #ba6641 !important;
     }
     .nav-menu a.active::after {
         width: 100% !important;
