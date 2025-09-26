@@ -658,6 +658,14 @@ body {
         left: 0;
     }
 
+    /* Hero section mobile adjustments */
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -694,6 +702,15 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Hero section iPhone/small screen adjustments */
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
     }
@@ -710,6 +727,30 @@ body {
     .btn-primary, .btn-secondary {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 }
 
