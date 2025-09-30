@@ -409,36 +409,53 @@ body {
 }
 
 .humanist-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.humanist-text {
+    text-align: center;
+}
+
+.humanist-text p {
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
 .humanist-text h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: #2c3e50;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 1.5rem 0;
+    text-align: center;
 }
 
 .humanist-text ul {
     list-style: none;
     padding: 0;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
 }
 
 .humanist-text li {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
     position: relative;
     color: #34495e;
     line-height: 1.7;
+    text-align: left;
 }
 
 .humanist-text li::before {
     content: "•";
     color: var(--brown-rust);
     font-weight: bold;
+    font-size: 1.5rem;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .humanist-text a {
@@ -882,6 +899,110 @@ body {
 
     .hero-description {
         font-size: 1rem;
+    }
+    
+    /* Humanist section mobile adjustments */
+    .humanist-text p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .humanist-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .humanist-text li {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Services grid mobile adjustments */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    /* About section mobile adjustments */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    /* Gallery mobile adjustments */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Contact section mobile adjustments */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
+
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 320px) {
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .humanist-text p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .humanist-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .humanist-text li {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .service-card {
+        padding: 1.2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .testimonial {
+        padding: 1.2rem 1.8rem;
+    }
+    
+    .contact-info {
+        padding: 1.2rem;
     }
 }
 
