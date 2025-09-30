@@ -148,7 +148,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--pampas);
+    color: white;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -252,41 +252,47 @@ body {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .section-header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #34495e;
     max-width: 600px;
     margin: 0 auto;
 }
 
+.services-header p {
+    max-width: 900px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
 /* About Section */
 .about {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: white;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
 }
 
 .about-text p {
     font-size: 1.1rem;
     color: #34495e;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .credentials {
@@ -324,7 +330,7 @@ body {
 
 /* Services Section */
 .services {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: linear-gradient(135deg, var(--pampas) 0%, #f5f0eb 100%);
 }
 
@@ -336,9 +342,9 @@ body {
 
 .service-card {
     background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 4px solid var(--brown-rust);
 }
@@ -366,15 +372,15 @@ body {
 
 .service-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .service-card p {
     color: #34495e;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-card ul {
@@ -396,9 +402,58 @@ body {
     font-weight: bold;
 }
 
+/* What is a Humanist Officiant Section */
+.humanist-officiant {
+    padding: 4rem 0;
+    background: white;
+}
+
+.humanist-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.humanist-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 2rem 0 1rem 0;
+}
+
+.humanist-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.humanist-text li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #34495e;
+    line-height: 1.7;
+}
+
+.humanist-text li::before {
+    content: "•";
+    color: var(--brown-rust);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.humanist-text a {
+    color: var(--brown-rust);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.humanist-text a:hover {
+    text-decoration: underline;
+}
+
 /* Testimonials Section */
 .testimonials {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     background: linear-gradient(135deg, var(--pampas) 0%, #f5f0eb 100%);
 }
 
@@ -407,9 +462,9 @@ body {
     margin: 0 auto;
     text-align: center;
     background: white;
-    padding: 2rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -472,7 +527,7 @@ body {
 
 /* Gallery Section */
 .gallery {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: white;
 }
 
@@ -564,7 +619,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: white;
 }
@@ -746,6 +801,7 @@ body {
         gap: 2rem;
     }
 
+
     .hero-text h1 {
         font-size: 2.5rem;
     }
@@ -813,6 +869,7 @@ body {
         min-height: 100vh;
         padding-top: 50px;
     }
+
 
     .hero-text h1 {
         font-size: 1.8rem;
