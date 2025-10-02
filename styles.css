@@ -477,9 +477,10 @@ body {
 .testimonials-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.5rem;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .testimonial {
@@ -499,9 +500,9 @@ body {
 /* Responsive design for testimonials */
 @media (max-width: 768px) {
     .testimonials-grid {
-        gap: 1.5rem;
+        gap: 2rem;
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 1rem;
     }
     
     .testimonial {
@@ -1024,8 +1025,8 @@ body {
     }
     
     .testimonials-grid {
-        gap: 1rem;
-        padding: 0 0.5rem;
+        gap: 1.5rem;
+        padding: 0.5rem;
     }
     
     .testimonial {
