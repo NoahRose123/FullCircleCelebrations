@@ -474,52 +474,81 @@ body {
     background: linear-gradient(135deg, var(--pampas) 0%, #f5f0eb 100%);
 }
 
-.testimonial {
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
+}
+
+.testimonial {
     background: white;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 15px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 120px;
 }
 
 /* Removed the orange quote mark */
 
 /* Responsive design for testimonials */
 @media (max-width: 768px) {
-    .testimonial {
-        padding: 1.5rem 2rem;
+    .testimonials-grid {
+        gap: 1.5rem;
         max-width: 100%;
+        padding: 0 1rem;
     }
+    
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 2rem;
+        min-height: auto;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-author {
+        min-width: auto;
+    }
+    
+    .author-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.testimonial-content {
+    flex: 1;
 }
 
 .testimonial-content p {
     font-size: 0.95rem;
     color: #34495e;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin: 0;
     font-style: italic;
-}
-
-.testimonial-content p:last-of-type {
-    margin-bottom: 1.2rem;
 }
 
 .testimonial-author {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
+    min-width: 120px;
 }
 
 .author-image {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--brown-rust);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .author-image img {
@@ -689,47 +718,44 @@ body {
 
 /* Service location now uses standard contact-item styling */
 
-.contact-form {
+.calendly-widget {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     height: fit-content;
+    min-width: 320px;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.calendly-inline-widget {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-    font-family: 'Source Sans Pro', sans-serif;
-    transition: border-color 0.3s ease;
+/* Responsive design for Calendly widget */
+@media (max-width: 768px) {
+    .calendly-widget {
+        padding: 1.5rem;
+        min-width: 280px;
+    }
+    
+    .calendly-inline-widget {
+        min-width: 280px !important;
+        height: 600px !important;
+    }
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--brown-rust);
-}
-
-.form-group select option {
-    background: var(--limed-oak);
-    color: white;
+@media (max-width: 480px) {
+    .calendly-widget {
+        padding: 1rem;
+        min-width: 260px;
+    }
+    
+    .calendly-inline-widget {
+        min-width: 260px !important;
+        height: 500px !important;
+    }
 }
 
 /* Footer */
@@ -997,8 +1023,19 @@ body {
         font-size: 1.2rem;
     }
     
+    .testimonials-grid {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
     .testimonial {
         padding: 1.2rem 1.8rem;
+        gap: 1rem;
+    }
+    
+    .author-image {
+        width: 60px;
+        height: 60px;
     }
     
     .contact-info {
